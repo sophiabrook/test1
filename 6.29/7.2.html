@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<title>Examples</title>
+<meta name="description" content="">
+<meta name="keywords" content="">
+<link href="" rel="stylesheet">
+</head>
+<body>
+<!-- <p id="p1">这是段落一 <span class="sp1">这是span一</span></p>
+<p class="para1">这是第二段</p>
+<p class="para2">这是第三段</p>
+<p class="para4">这是第四段</p>
+<ul class="ct">
+	<li class="item">11</li>
+	<li class="item">22</li>
+	<li class="item">33</li>
+	<li class="item">44</li>
+</ul> -->
+<div id="ct">
+	<a href="#" class="btn">我是链接</a>
+
+</div>
+
+    <script>
+    	var btn = document.querySelector('.btn')
+    	// btn.addEventListener('click',function(e){
+    	// 	console.log(e)
+    	// 	console.log(this.innerText);
+    	// 	console.log('click me')
+    	// },false);
+
+
+    	// btn.attachEvent("onclick",function(e){
+    	// 	console.log('click me');
+    	// 	console.log(this); //this代表window
+    	// })
+
+
+    	on(btn,'click',function(e){
+    		console.log(e);
+    	 	console.log(this);
+    	 	console.log('click me')
+    	})
+
+    	function on(el,type,handler){
+    		if(el.addEventListener){
+    			el.addEventListener(type,handler,false)
+    		}
+    		else{
+    			// el.attachEvent('on'+type,function(){
+    			// 	handler.apply(el);
+    			// })
+
+    			el['e'+type+handler]=handler;
+    			el[type+handler] = function(){
+    				el['e'+type+handler](window.event)
+    			}
+    			el.attachEvent('on'+type,el[type+handler])
+    		}
+    	}
+
+    	//
+
+
+
+
+
+
+    	// document.querySelector('#ct').onclick=function(){
+    	// 	console.log(this)
+    	// 	console.log('ct')
+    	// // }
+    	// btn.addEventListener('click',function(){
+    	// 	console.log(this);
+    	// 	console.log('ct');
+    	// })
+    	
+    	// document.querySelector('#ct').addEventListener('click',function(){
+    	// 	console.log(this);
+    	// 	console.log('ct222');
+    	// })
+    </script>
+</body>
+</html>

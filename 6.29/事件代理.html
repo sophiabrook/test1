@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<title>Examples</title>
+<meta name="description" content="">
+<meta name="keywords" content="">
+<link href="" rel="stylesheet">
+</head>
+<body>
+    <div id="wrap">
+    	<div class="d">item1</div>
+    	<div class="d">item2</div>
+    	<div class="d">item3</div>
+    	<a href="#" id="link">链接</a>
+    </div>
+    <button id="btn">添加</button>
+    <script>
+    	var wrap = document.getElementById('wrap');
+    	console.log(wrap);
+	    var	ds=wrap.getElementsByClassName('d');
+	    	console.log(ds);
+	    var	link=document.getElementById('link');
+	    	console.log(link);
+	    var	btn = document.getElementById('btn');
+	    	console.log(btn);
+
+    	// for(var i = 0;i<ds.length;i++){
+    	// 	ds[i].onclick=function(){
+    	// 		console.log(this.innerText)
+    	// 	}
+    	// }
+    	// link.onclick=function(){
+    	// 	console.log('11')
+    	// }
+    	// btn.onclick=function(){
+    	// 	var node =document.createElement('div');
+    	// 	node.setAttribute('class','d');
+    	// 	node.innerText="hello";
+    	// 	node.onclick=function(){
+    	// 		console.log(this.innerText)
+    	// 	}
+    	// 	wrap.appendChild(node);
+    	// }
+
+    	wrap.onclick=function(e){
+    		
+    		if(e.target.id==="link"){
+    			console.log("welcome")
+    		}
+    		if(e.target.className==="d"){
+    			console.log(e.target.innerText);
+    		}
+    	}
+
+    	btn.onclick=function(){
+    		var node =document.createElement('div');
+    		node.setAttribute('class','d');
+    		node.innerText="hello";
+    		// node.onclick=function(){
+    		// 	console.log(this.innerText)
+    		// }
+    		wrap.appendChild(node);
+    	}
+
+    </script>
+</body>
+</html>

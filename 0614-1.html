@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<title>Examples</title>
+<meta name="description" content="">
+<meta name="keywords" content="">
+<link href="" rel="stylesheet">
+<style>
+	html,body,ul,li{
+		margin: 0;
+		padding: 0;
+	}
+	li{
+		list-style: none;
+	}
+	body{
+		background: url(https://ss0.bdstatic.com/k4oZeXSm1A5BphGlnYG/skin/767.jpg?2) no-repeat center 0;
+		-webkit-background-size: cover;
+		background-size: cover;
+		height: 100%;
+		width: 100%;
+		position: fixed;
+		left: 0;
+		top: 0;
+	}
+	.wrap{
+		width: 1000px;
+		margin: 0 auto;
+	}
+	.clearfix:after{
+		content: "";
+		display: block;
+		clear: both;
+	}
+	#nav{
+		background: rgba(1,1,1,0.5);
+		height: 36px;
+		line-height: 36px;
+		font-size: 14px;
+		font-family: "微软雅黑";
+	}
+	#nav .left-wrap{
+		float: left;
+	}
+	#nav .right-wrap{
+		float: right;
+	}
+	#nav a{
+		color: #fff;
+		padding: 0 8px;
+
+	}
+	#nav .left-wrap a:nth-child(1){
+		text-decoration: none;
+	}
+	#nav .right-wrap a:nth-child(9){
+		text-decoration: none;
+		background: rgb(27,139,251);
+	}
+	#nav .right-wrap a{
+		display: inline-block;
+	}
+	#container{
+		text-align: center;
+		padding-top: 150px;
+	}
+	#container img{
+		width: 300px;
+	}
+	#container .so{
+		width: 500px;
+		height: 30px;
+		padding: 6px;
+		border: none;
+	}
+	#container .baidu{
+		width: 100px;
+		height: 30px;
+		padding: 6px;
+		border: none;
+		box-sizing: content-box;
+		font-size:16px;
+		position: relative;
+		right: 10px;
+	}
+	#container span{
+		position: absolute;
+		right: 8px;
+		top: 0px;
+		display: block;
+		background: url(https://ss1.bdstatic.com/5eN1bjq8AAUYm2zgoY3K/r/www/cache/static/protocol/https/soutu/img/camera_new_679c15cc.png) no-repeat 0 0;
+		width: 20px;
+		height: 20px;
+	}
+	#container .wrap{
+		position: relative;
+		display: inline;
+	}
+</style>
+</head>
+<body>
+    <div id="header">
+    	<div id="nav" class="clearfix">
+    		<div class="left-wrap">
+    			<a href="#"><span>深圳：</span><span></span><span>29</span><span>优</span>  <span>31</span> |</a>
+    			<a href="#">宝箱</a>
+    			<a href="#">换肤</a>
+    			<a href="#">消息</a>
+    			<a href="#">显示频道</a>
+    		</div>
+    		<div class="right-wrap">
+    			<a href="#">糯米</a>
+    			<a href="#">新闻</a>
+    			<a href="#">hao123</a>
+    			<a href="#">地图</a>
+    			<a href="#">视频</a>
+    			<a href="#">贴吧</a>
+    			<a href="#">宋菲1991</a>
+    			<a href="#">设置</a>
+    			<a href="#">更多产品</a>
+    		</div>
+    	</div>
+    </div>
+    <div id="container">
+    	<div class="wrap">
+    		<img src="https://ss0.bdstatic.com/5aV1bjqh_Q23odCf/static/superman/img/logo/logo_white.png" alt="">
+    		<form action="search.html" name="search" method="post">
+    			<div class="wrap"><input class="so" type="text" name="so"><span></span></div>
+    			<input class="baidu" type="submit" value="百度一下">
+    		</form>
+    	</div>
+    </div>
+    <div id="footer"></div>
+</body>
+</html>

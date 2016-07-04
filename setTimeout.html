@@ -1,0 +1,82 @@
+<script>
+ function getMin(){
+   var i = 0;
+   var start = Date.now(); //1467115569893 获取函数开始时间
+   var clock = setTimeout(function(){ 
+          i++; //1
+          if(i === 1000){ //循环了一千次
+                 clearTimeout(clock); //延时函数停止
+                 var end = Date.now(); //获取函数结束时间
+                 console.log((end-start)/i); //获取每一次函数执行时间
+          }
+          else{ //i<1000时，调用setTimeout函数本身。
+                 clock = setTimeout(arguments.callee,0);
+          }
+          },0)
+     }
+  getMin()
+// var a=1;
+// setTimeout(function(){
+// 	console.log('before',a);
+// 	a=2;
+// 	console.log('after',a)
+// },0)
+// a =100;
+// console.log(a);
+// function usetime(){
+// 	for(var i=0;i<100;i++){
+// 		console.log("");
+// 	}
+// }
+
+// var z=0;
+// function intv(){
+// 	setTimeout(function(){
+// 		usetime();
+// 		console.log("z"+z++);
+// 		intv();
+// 	},1000);
+// }
+// intv()
+
+// var j=0;
+// setInterval(function(){
+// 	usetime();
+// 	console.log("j"+j++);
+
+// },1000)
+
+//setTimeout 执行时间长于setInterval
+
+
+// function dealwith(){
+//     var i=0;
+//     function inc(){
+//         i++;
+//     }
+//     function dec(){
+//         i--;
+//     }
+//     function get(){
+//         console.log(i)
+//         return i;
+//     }
+//     function set(k){
+//         i=k;
+//     }
+//     return{
+//         inc:inc,
+//         dec:dec,
+//         get:get,
+//         set:set
+//     }
+// }
+// var deal =dealwith();
+// deal.set(100);
+// deal.inc();
+// deal.get();
+// deal.dec();
+// deal.get();
+// f(100)=f(100-1)+f(100-2)
+// f(100)=f(100-1)+
+</script>
