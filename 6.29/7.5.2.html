@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<title>Examples</title>
+<meta name="description" content="">
+<meta name="keywords" content="">
+<link href="" rel="stylesheet">
+<style>
+	.status1{
+		background-color: yellow;
+	}
+</style>
+</head>
+<body>
+    <div class="ct">nnnnnn</div>
+    <img src="+b+" alt="搜狗网址导航">
+    <script>
+    	function $$(el){
+    		if(el.length<1){
+    			return;
+    		}
+    		var sub = el.substring(1)
+    		if(el[0]==="#"){
+    			return document.getElementById(sub);
+    		}
+    		else if(el[0]==='.'){
+    			return document.getElementsByClassName(sub);
+    		}
+    		else {
+    			return document.getElementsByTagName(sub);
+    		}
+    	}
+
+    	$$('.ct')[0].addEventListener('click',function(){
+    		//console.log('ddddddddd')
+    		// $$('.ct')[0].style.backgroundColor = "red";
+    		$$('.ct')[0].className = "status1";
+    		})
+    	//console.log($$('.ct')[0])
+
+    	var b = "//upd13.sogoucdn.com/nstatic/img/logo.png?v=2"
+
+    </script>
+</body>
+</html>
